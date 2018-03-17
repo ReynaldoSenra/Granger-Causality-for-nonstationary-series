@@ -1,4 +1,6 @@
-# Requires the packages vars and aod
+# Requires the packages vars and aod. To install them in Windows or Mac go to the menu of RStudio and click on Tools and after on Install Packages...
+# Then, in "Packages (separate multiple with space or comma):" write aod, vars (without the quotes) and RStudio will install both packages
+# To load your data go the menu of RStudio and click on File and after on Import Dataset.
 
 toda_yamamoto<-function(x, n = 5, w = 1, lag.max = 10, type = c("const", "trend", "both", "none"), m = 1, o = 7, corrhet = 3, season = NULL, exogen = NULL, digits = 4, probability = 0.05) { 
   tablavar<-matrix(nrow = (n-1)*(ncol(x)-n-w+1), ncol = (10+2*w+2*corrhet)) 
